@@ -1,5 +1,3 @@
-// import { EmailArray } from './EmailArray';
-
 /**
  * Email regexp with nordic countries in mind
  *
@@ -11,63 +9,40 @@
  */
 
 export const EmailExp: RegExp = /^[a-zA-ZæøåÆØÅ0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-ZæøåÆØÅ0-9](?:[a-zA-ZæøåÆØÅ0-9-]{0,61}[a-zA-ZæøåÆØÅ0-9])?(?:\.[a-zA-ZæøåÆØÅ0-9](?:[a-zA-ZæøåÆØÅ0-9-]{0,61}[a-zA-ZæøåÆØÅ0-9])?)*$/;
-
-export function EmailValidation(
-  pattern: RegExp,
-  emailInput: string | string[],
-) {
+/**
+ * Validate an email _string_
+ * @param pattern A RegExp for email validation
+ * @param emailInput A string
+ *
+ * **NOTE:** The actual validation should happen on the server,
+ * there are lots of ways to get around validation on the client
+ *
+ * **It is not secure to rely solely on client-side validation**
+ */
+export function EmailValidation(pattern: RegExp, emailInput: string) {
   console.info('The input:' + emailInput);
-  /** Declare utility arrays and booleans */
-  let ValidEmails: string[] = [];
-  let InvalidEmails: string[] = [];
-  let inputIsList: Boolean = false;
-  let isValid: Boolean = false;
+  /** Declare utilities */
+  let Email: string = '';
+  let isInputValid: Boolean = false;
 
   /** Pattern checking is a boolean action */
   let patternExecution: Boolean;
 
-  /** If the input's an array */
-  if (typeof emailInput != 'string') {
-    console.info('Input is array');
-    inputIsList = true;
-    let listOfEmails: string[] = emailInput;
-    listOfEmails.map(emailInput => {
-      patternExecution = pattern.test(emailInput);
-      if (patternExecution) {
-        ValidEmails.push(emailInput);
-        isValid = true;
-      } else {
-        InvalidEmails.push(emailInput);
-        isValid = false;
-      }
-    });
-  }
   /** If the input's a string */
   if (typeof emailInput == 'string') {
-    console.info('Input is string');
-    inputIsList = false;
-    /**
-     * Check the input literally,
-     * otherwise type checking says it also can be an array.
-     */
     let email: string = `${emailInput}`;
     patternExecution = pattern.test(email);
-
+    Email = email;
     if (!patternExecution) {
-      InvalidEmails.push(email);
-      isValid = false;
-      console.info(`The invalid email:\n ${InvalidEmails}`);
+      isInputValid = false;
+      console.info(`The invalid email:\n ${Email}`);
     } else {
-      ValidEmails.push(email);
-      isValid = true;
-      console.info(`The valid email:\n ${ValidEmails}`);
+      isInputValid = true;
+      console.info(`The valid email:\n ${Email}`);
     }
   }
-  if (inputIsList) {
-    console.group('The valid emails:\n', ValidEmails);
-    console.group('The invalid emails:\n', InvalidEmails);
-  }
-  return isValid;
+
+  return isInputValid;
 }
 
 // console.info(EmailValidation(EmailExp, EmailArray));
