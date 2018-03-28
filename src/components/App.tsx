@@ -4,9 +4,10 @@ import * as React from 'react';
 import Typography from 'material-ui/Typography';
 
 // Import TS types
-import * as Type from '../../types/interfaces';
+import { Props } from '../../types/global';
 
-import Inputs from '../ui/inputs/DefaultInput';
+// import Inputs from '../ui/inputs/DefaultInput';
+import EmailInput from '../ui/inputs/EmailInput';
 
 /** Basic set of props to be used in the app
  * @typedef defaultProps
@@ -17,9 +18,8 @@ export const defaultProps = {
   title: 'Regular expressions in JS',
   children: (
     <>
-      <Typography variant="body1">... Hi ...</Typography>
       <br />
-      <Inputs />
+      <EmailInput />
     </>
   ),
 };
@@ -34,7 +34,7 @@ export const defaultProps = {
  * @param {defaultProps} props  The props
  * @param {Array} State The state (usually not used here)
  */
-export class App extends React.Component<Type.Props, {}> {
+export class App extends React.Component<Props, {}> {
   static defaultProps = {
     testProps: {
       title: 'No title has been added to testProps. :(',
@@ -50,7 +50,7 @@ export class App extends React.Component<Type.Props, {}> {
       title: PropTypes.string.isRequired,
     }),
   };
-  constructor(props: Type.Props) {
+  constructor(props: Props) {
     super(props);
   }
   render() {

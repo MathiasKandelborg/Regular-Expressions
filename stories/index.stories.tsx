@@ -16,7 +16,7 @@ import { MuiThemeProvider, createGenerateClassName } from 'material-ui/styles';
 import { defaultTheme } from '../src/ui/material-ui-next/defaultTheme';
 import { App, defaultProps } from '../src/components/App';
 
-import Inputs from '../src/ui/inputs/DefaultInput';
+// import Inputs from '../src/ui/inputs/DefaultInput';
 import EmailInput from '../src/ui/inputs/EmailInput';
 
 const theme = defaultTheme;
@@ -40,7 +40,7 @@ addDecorator(
 storiesOf('Component Pages', module).add('Inputs', () => (
   <>
     <MuiThemeProvider theme={theme}>
-      <Inputs />
+      <EmailInput />
     </MuiThemeProvider>
   </>
 ));
@@ -49,7 +49,6 @@ storiesOf('Root components', module).add('App component', () => (
   <JssProvider generateClassName={generateClassName}>
     <MuiThemeProvider theme={object('Global Theme (Not editable)', theme)}>
       <App testProps={object('The props', defaultProps)} />
-      <EmailInput />
     </MuiThemeProvider>
   </JssProvider>
 ));
