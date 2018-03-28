@@ -6,3 +6,6 @@ yarn.lock
 build/
 
 yarn-error\.log
+
+tsLib
+types
