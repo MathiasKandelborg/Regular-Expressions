@@ -1,7 +1,8 @@
 node_modules
 dist
+parcelDev
 .cache
-
+parcelDev
 yarn.lock
 build/
 
