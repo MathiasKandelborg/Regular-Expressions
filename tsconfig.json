@@ -12,7 +12,7 @@
     "noImplicitAny": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "removeComments": true,
+    "removeComments": false,
     "strictNullChecks": true,
     "preserveConstEnums": true,
     "sourceMap": true,
