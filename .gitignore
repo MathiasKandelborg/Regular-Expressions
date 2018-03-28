@@ -1,5 +1,6 @@
 node_modules
 dist
+parcelDev
 .cache
 
 yarn.lock
@@ -8,3 +9,12 @@ build/
 yarn-error\.log
 
 tsLib
+.storybook
+.vscode
+stories
+types
+typings
+src/components/
+src/ui
+src/main.tsx
+tools
