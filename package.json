@@ -4,9 +4,22 @@
   "description":
     "Common regular expressions written in JavaScript - it's usable on server and client.",
   "types": "/lib/typings",
-  "repository": "git@github.com:MathiasKandelborg/Regular-Expressions.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MathiasKandelborg/Regular-Expressions.git"
+  },
+  "keywords": [
+    "regularExpressions",
+    "regexp",
+    "RegExp",
+    "validation",
+    "validator"
+  ],
   "author": "Mathias <mathias@kandelborg.dk>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MathiasKandelborg/Regular-Expressions/issues"
+  },
   "scripts": {
     "start": "parcel index.html -d parcelDev/",
     "storybook": "start-storybook -p 4321",
