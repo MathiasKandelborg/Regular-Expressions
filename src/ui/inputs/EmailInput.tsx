@@ -1,8 +1,10 @@
-import { Theme, withStyles, WithStyles } from 'material-ui/styles';
 import * as React from 'react';
+import classNames from 'classnames';
+import { Theme, withStyles, WithStyles } from 'material-ui/styles';
 import Input, { InputLabel } from 'material-ui/Input';
 import { FormControl } from 'material-ui/Form';
-import classNames from 'classnames';
+import Button from 'material-ui/Button';
+import { EmailValidation, EmailExp } from '../../utils/EmailRegExp';
 
 const style = withStyles((theme: Theme) => ({
   root: {
@@ -23,13 +25,17 @@ type PropsWithStyles = {} & WithStyles<'root' | 'textField'>;
 const EmailInput = style<Props>(
   class InputAdornments extends React.PureComponent<PropsWithStyles> {
     state = {
+      regExp: EmailExp,
       email: '',
     };
 
     handleChange = prop => event => {
       this.setState({ [prop]: event.target.value });
     };
-
+    handleClick = event => {
+      event.preventDefault();
+      console.info(EmailValidation(EmailExp, this.state.email));
+    };
     render() {
       const { classes } = this.props;
 
@@ -39,12 +45,18 @@ const EmailInput = style<Props>(
             <InputLabel htmlFor="email-regexp">Email</InputLabel>
             <Input
               id="email"
-              type="text"
-              aria-invalid="true"
+              type="email"
               value={this.state.email}
               onChange={this.handleChange('email')}
             />
           </FormControl>
+          <Button
+            color="primary"
+            variant="raised"
+            onClick={e => this.handleClick(e)}
+          >
+            Validate
+          </Button>
         </>
       );
     }
