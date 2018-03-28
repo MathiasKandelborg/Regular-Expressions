@@ -7,7 +7,7 @@ import * as React from 'react';
  * @param React.node The React children nodes
  */
 /** @type {props} */
-export declare interface props {
+export interface props {
   title: string;
   children: React.ReactFragment;
 }
@@ -16,6 +16,6 @@ export declare interface props {
  * The properties passed to the root app component.
  * @see {module:foo.props}
  */
-export declare interface Props {
+export interface Props {
   testProps: props;
 }
