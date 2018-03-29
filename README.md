@@ -1,8 +1,43 @@
-# Regular Expressions
+# Regular Expressions for JavaScript
 
-Made for the purpose of validating strings and arrays with regular expressions in JS.
+Made for the purpose of validating strings and arrays with regular expressions.
 
-## Getting Started
+This package exposes API's through `/lib/utils`. So far you can:
+
+## Validate a single email
+
+```js
+import {
+  EmailValidation,
+  EmailExp,
+} from 'regular-expression-validation/lib/EmailRegExp';
+
+EmailValidation(EmailExp, 'validate@this.email.com');
+```
+
+## Validate an array of emails
+
+```js
+import {
+  EmailArrayValidation,
+  EmailExp,
+} from 'regular-expression-validation/lib/utils/EmailArrayRegExp';
+import { EmailArray } from 'regular-expression-validation/lib/EmailArray';
+
+const myEmailArray = EmailArray;
+
+EmailArrayValidation(EmailExp, myEmailArray);
+```
+
+## An array of emails for testing
+
+```js
+import { EmailArray } from 'regular-expression-validation/lib/EmailArray';
+
+console.info(`An array of emails:\n${EmailArray}`);
+```
+
+## Getting Started with development
 
 > These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
@@ -119,7 +154,9 @@ See also the list of [contributors](https://github.com/MathiasKandelborg/Regular
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
+Generally, i won't do anything if you use my code. I do strongly recommend to test it thoroughly if you're going to use it in production.
+
 ## Acknowledgments
 
 * [PurpleBooth](https://gist.github.com/PurpleBooth) - README.md and CONTRIBUTIONS.md templates
-* TODO: Update this list before releasing
+* [Kriasoft and all the people at RSK](https://github.com/kriasoft/react-starter-kit) - I learned a lot about configuration from using this repo. My config files mostly look like theirs because of all the practices I've taken with me.
