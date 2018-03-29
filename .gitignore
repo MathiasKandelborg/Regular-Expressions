@@ -13,7 +13,6 @@ tsLib
 .vscode
 stories
 types
-typings
 src/components/
 src/ui
 src/main.tsx
