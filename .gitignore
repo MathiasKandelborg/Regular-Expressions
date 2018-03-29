@@ -2,9 +2,10 @@ node_modules
 dist
 parcelDev
 .cache
-
+parcelDev
 yarn.lock
 build/
+tsconfig.npm-package.json
 
 yarn-error\.log
 

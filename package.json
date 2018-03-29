@@ -1,23 +1,35 @@
 {
-  "name": "regularexpressions",
+  "name": "regular-expressions",
   "version": "1.0.0",
-  "description": "Common regular expressions",
-  "main": "/index.html",
-  "repository": "git@github.com:MathiasKandelborg/Regular-Expressions.git",
+  "description":
+    "Common regular expressions written in JavaScript - it's usable on server and client.",
+  "types": "/lib/typings",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MathiasKandelborg/Regular-Expressions.git"
+  },
+  "keywords": [
+    "regularExpressions",
+    "regexp",
+    "RegExp",
+    "validation",
+    "validator"
+  ],
   "author": "Mathias <mathias@kandelborg.dk>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MathiasKandelborg/Regular-Expressions/issues"
+  },
   "scripts": {
-    "start": "parcel index.html",
+    "start": "parcel index.html -d parcelDev/",
+    "storybook": "start-storybook -p 4321",
     "build": "parcel build index.html -d build/dist/parcel",
     "build-dev": "parcel build index.html -d build/dev/parcel --public-url ./",
-    "storybook": "start-storybook -p 4321",
     "build-storybook": "build-storybook"
   },
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
   "devDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-jss": "^8.3.5",
     "typeface-roboto": "^0.0.54",
     "@storybook/addon-a11y": "^3.3.15",
