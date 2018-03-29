@@ -5,9 +5,16 @@ parcelDev
 parcelDev
 yarn.lock
 build/
-tsconfig.npm-package.json
 
 yarn-error\.log
 
 tsLib
-lib/
+.storybook
+.vscode
+stories
+types
+typings
+src/components/
+src/ui
+src/main.tsx
+tools
