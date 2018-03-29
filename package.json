@@ -1,8 +1,7 @@
 {
   "name": "regular-expression-validation",
-  "version": "1.0.0",
-  "description":
-    "Regular expressions wrapped in functions for basic validation - in client and the server.",
+  "version": "1.0.1",
+  "description": "Regular expressions wrapped in functions for basic validation - in client and the server.",
   "types": "/lib/typings",
   "repository": {
     "type": "git",
