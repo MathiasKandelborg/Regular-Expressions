@@ -1,8 +1,8 @@
 {
-  "name": "regular-expressions",
+  "name": "regular-expression-validation",
   "version": "1.0.0",
   "description":
-    "Common regular expressions written in JavaScript - it's usable on server and client.",
+    "Regular expressions wrapped in functions for basic validation - in client and the server.",
   "types": "/lib/typings",
   "repository": {
     "type": "git",
