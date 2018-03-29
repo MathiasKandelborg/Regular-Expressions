@@ -2,7 +2,7 @@
 
 Made for the purpose of validating strings and arrays with regular expressions.
 
-This package exposes API's through `/lib/utils`. So far you can:
+This package exposes API's through `/lib`. So far you can:
 
 ## Validate a single email
 
@@ -21,7 +21,7 @@ EmailValidation(EmailExp, 'validate@this.email.com');
 import {
   EmailArrayValidation,
   EmailExp,
-} from 'regular-expression-validation/lib/utils/EmailArrayRegExp';
+} from 'regular-expression-validation/lib/EmailArrayRegExp';
 import { EmailArray } from 'regular-expression-validation/lib/EmailArray';
 
 const myEmailArray = EmailArray;
