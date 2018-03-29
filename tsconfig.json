@@ -5,9 +5,10 @@
     "strict": true,
     "alwaysStrict": true,
     "downlevelIteration": true,
-    "lib": ["dom", "es2015"],
-    "jsx": "react",
+    "lib": ["es5", "dom"],
+    "module": "es2015",
     "moduleResolution": "node",
+    "jsx": "react",
     "newLine": "LF",
     "noImplicitAny": false,
     "noUnusedLocals": true,
@@ -21,7 +22,6 @@
     "outDir": "./tsLib"
   },
   "parcelTsPluginOptions": {
-    // If true type-checking is disabled
     "transpileOnly": false
   }
 }
